@@ -12,7 +12,7 @@ namespace Test2DGame
         {
             _pcInputHorizontal = new PCInputHorizontal();
             _pcInputVertical = new PCInputVertical();
-            _inputFire1 = new PCInputFire1();
+            _inputFire1 = new PCInputFireFirst();
         }
 
         public void Initialization()

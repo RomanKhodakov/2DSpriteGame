@@ -9,8 +9,8 @@ namespace Test2DGame
         public Track Track;
         public List<Sprite> Sprites;
         public bool Loop = false;
-        public float Speed = 10;
-        public float Counter = 0;
+        public float Speed;
+        public float Counter;
         public bool Sleeps;
 
         public void Update()

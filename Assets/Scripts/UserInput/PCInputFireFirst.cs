@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Test2DGame
 {
-    internal sealed class PCInputFire1 : IUserInputProxy <bool>
+    internal sealed class PCInputFireFirst : IUserInputProxy <bool>
     {
         public event Action<bool> AxisOnChange = delegate(bool f) {  };
         

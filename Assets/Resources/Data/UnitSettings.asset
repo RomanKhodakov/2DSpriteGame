@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 477eb9fe2468e6b4a8d9c5959dc18663, type: 3}
   m_Name: UnitSettings
   m_EditorClassIdentifier: 
-  playerSprite: {fileID: 0}
-  _name: 
-  _health: 0
-  _damageModifier: 0
+  playerSprite: {fileID: 21300000, guid: e4ab738c3a9c842b69fa93cbbff0ea53, type: 3}
+  _name: Player
   _speed: 0
-  _accelerationSpeed: 0
-  _mass: 0
-  _position: {x: 0, y: 0}
+  _mass: 10
+  _colliderRadius: 0.215

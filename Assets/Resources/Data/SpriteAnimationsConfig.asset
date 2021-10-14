@@ -28,3 +28,11 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 0d0cae25406c447e3a85ab8e195ac041, type: 3}
     - {fileID: 21300000, guid: b0b63da2b52704d65a05fb59f335baf3, type: 3}
     - {fileID: 21300000, guid: 35140b321bc564c93876fe5a7bb532dc, type: 3}
+  - Track: 2
+    Sprites:
+    - {fileID: 21300000, guid: 7dae316cab1f54aeea0b7b52a1f0495d, type: 3}
+    - {fileID: 21300000, guid: dec23d3f1b157493ea928ad647f275c2, type: 3}
+    - {fileID: 21300000, guid: 246e0385cab41407fb2ba3829ad8fea3, type: 3}
+    - {fileID: 21300000, guid: 0d0cae25406c447e3a85ab8e195ac041, type: 3}
+    - {fileID: 21300000, guid: b0b63da2b52704d65a05fb59f335baf3, type: 3}
+    - {fileID: 21300000, guid: 35140b321bc564c93876fe5a7bb532dc, type: 3}
