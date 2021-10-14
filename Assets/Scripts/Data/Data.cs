@@ -7,33 +7,49 @@ namespace Test2DGame
     [CreateAssetMenu(fileName = "Data", menuName = "Data/Data")]
     internal sealed class Data : ScriptableObject
     {
+        [SerializeField] private string _playerDataPath;
         [SerializeField] private string _spriteAnimationsDataPath;
-        private PlayerView _player;
-        private SpriteAnimationsConfig _spriteAnimations;
+        [SerializeField] private string _GunBulletDataPath;
+        private PlayerData _playerData;
+        private SpriteAnimationsConfig _playerSpriteAnimations;
+        private GunBulletData _gunBulletData;
         private GameObject _background;
 
-        public PlayerView PlayerView
+        public PlayerData PlayerData
         {
             get
             {
-                if (_player == null)
+                if (_playerData == null)
                 {
-                    _player = Object.FindObjectOfType<PlayerView>();
+                    _playerData = Load<PlayerData>("Data/" + _playerDataPath);
                 }
 
-                return _player;
+                return _playerData;
             }
         }
-        public SpriteAnimationsConfig SpriteAnimations
+        
+        public SpriteAnimationsConfig PlayerSpriteAnimations
         {
             get
             {
-                if (_spriteAnimations == null)
+                if (_playerSpriteAnimations == null)
                 {
-                    _spriteAnimations = Load<SpriteAnimationsConfig>("Data/" + _spriteAnimationsDataPath);
+                    _playerSpriteAnimations = Load<SpriteAnimationsConfig>("Data/" + _spriteAnimationsDataPath);
                 }
 
-                return _spriteAnimations;
+                return _playerSpriteAnimations;
+            }
+        }
+        public GunBulletData GunBulletData
+        {
+            get
+            {
+                if (_gunBulletData == null)
+                {
+                    _gunBulletData = Load<GunBulletData>("Data/" + _GunBulletDataPath);
+                }
+
+                return _gunBulletData;
             }
         }
         

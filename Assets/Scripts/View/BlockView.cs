@@ -1,5 +1,8 @@
 using UnityEngine;
 
-public class BlockView : MonoBehaviour
+namespace Test2DGame
 {
+    internal class BlockView : MonoBehaviour
+    {
+    }
 }

@@ -2,10 +2,17 @@ using UnityEngine;
 
 namespace Test2DGame
 {
-    public class PlayerView : MonoBehaviour
+    internal class PlayerView : MonoBehaviour
     {
-        [SerializeField] private SpriteRenderer _spriteRenderer;
-        
-        public SpriteRenderer SpriteRenderer => _spriteRenderer;
-    }
+        private SpriteRenderer _spriteRenderer;
+
+        public SpriteRenderer SpriteRenderer
+        {
+            get
+            {
+                if (!_spriteRenderer) _spriteRenderer = gameObject.GetOrAddComponent<SpriteRenderer>();
+                return _spriteRenderer;
+            }
+        }
+    };
 }
