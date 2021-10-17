@@ -13,8 +13,9 @@ namespace Test2DGame
 
         public PlayerView CreatePlayer()
         {
-            return new GameObject(_playerData.Name).AddCircleCollider2D(_playerData.ColliderRadius).
-                AddRigidbody2D(_playerData.Mass).AddSprite(_playerData.Sprite).AddComponent<PlayerView>();
+            var res = new GameObject(_playerData.Name).AddSprite(_playerData.Sprite);
+            res.GetOrAddComponent<CapsuleCollider2D>().size = new Vector2(_playerData.ColliderSizeX, _playerData.ColliderSizeY);
+            return res.AddComponent<PlayerView>();
         }
     }
 }

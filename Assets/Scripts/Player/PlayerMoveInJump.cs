@@ -4,18 +4,14 @@ namespace Test2DGame
 {
     internal class PlayerMoveInJump : State
     {
-        private bool _isInJump = true;
-
-        public PlayerMoveInJump(float currentVerticalVelocity)
-        {
-            VerticalVelocity = currentVerticalVelocity;
-        }
         public override void Handle(PlayerState playerState, SpriteAnimator spriteAnimator, SpriteRenderer spriteRenderer, 
-            float valueHorizontal, bool doJump, Transform playerTransform, float playerSpeed, float deltaTime)
+            PlayerContactsController playerContacts, float valueHorizontal, bool doJump, Rigidbody2D playerRb, 
+            IUnit playerData, float fixedDeltaTime)
         {
-            if (valueHorizontal == 0 && !_isInJump)
+            if (!(valueHorizontal > 0 && !playerContacts.HasRightContacts ||
+                  valueHorizontal < 0 && !playerContacts.HasLeftContacts))
             {
-                if (!doJump)
+                if (!doJump && playerContacts.IsGrounded)
                 {
                     playerState.State = new PlayerIdle();
                 }
@@ -24,29 +20,26 @@ namespace Test2DGame
                     playerState.State = new PlayerJumping();
                 }
             }
-            else if (!doJump && !_isInJump)
+            else if (!doJump && playerContacts.IsGrounded)
             {
                 playerState.State = new PlayerMoveHorizontal();
             }
             else
             {
-                spriteAnimator.StartAnimation(spriteRenderer, Track.Jump, true, AnimationSpeed);
+                spriteAnimator.StartAnimation(spriteRenderer, Track.Jump, true, playerData.AnimationSpeed);
                 
-                playerTransform.position += Vector3.up * (deltaTime * VerticalVelocity);
+                var isLeftMove = valueHorizontal < 0;
+                spriteRenderer.flipX = isLeftMove;
                 
-                VerticalVelocity += Gravity * deltaTime;
+                var newVelocity = fixedDeltaTime * playerData.MoveSpeed * (isLeftMove ? -1 : 1);
                 
-                if (valueHorizontal != 0)
+                playerRb.velocity = playerRb.velocity.Change(x: newVelocity);
+                
+                if (playerContacts.IsGrounded && playerRb.velocity.y < 3f)
                 {
-                    playerTransform.position += Vector3.right * (deltaTime * playerSpeed * (valueHorizontal < 0 ? -1 : 1));
-                    spriteRenderer.flipX = valueHorizontal < 0;
+                    playerRb.AddForce(Vector2.up * playerData.JumpStartSpeed);
                 }
                 
-                if (playerTransform.position.y <= StartVerticalCoordinate)
-                {
-                    _isInJump = false;
-                    VerticalVelocity = JumpStartSpeed;
-                }
             }
         }
     }

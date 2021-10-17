@@ -6,8 +6,11 @@ namespace Test2DGame
     {
         Sprite Sprite { get; }
         string Name { get; }
-        float Speed { get; }
         float Mass { get; }
-        float ColliderRadius { get; }
+        float ColliderSizeX { get; }
+        float ColliderSizeY { get; }
+        public float MoveSpeed { get; }
+        public float AnimationSpeed { get; }
+        public float JumpStartSpeed { get; }
     }
 }

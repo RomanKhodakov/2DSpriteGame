@@ -9,7 +9,7 @@ namespace Test2DGame
         private readonly float _lifeTime;
         private readonly Dictionary<int, Bullet> _bulletsWithID;
 
-        public BulletSelfDestructionController(BulletFactory bulletFactory)
+        public BulletSelfDestructionController(IBulletFactory bulletFactory)
         {
             _lifeTime = bulletFactory.GetBulletData().LifeTime;
             _viewServices = bulletFactory.GetBulletViewServices();

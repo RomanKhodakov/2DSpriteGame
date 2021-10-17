@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Test2DGame
 {
-    internal sealed class GunFactory
+    internal sealed class GunFactory : IGunFactory
     {
 
         public GunFactory()
