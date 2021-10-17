@@ -14,6 +14,7 @@ namespace Test2DGame
                 if (_time > lifeTime)
                 {
                     viewServices.Destroy(this);
+                    _time = 0;
                 }
             }
             else

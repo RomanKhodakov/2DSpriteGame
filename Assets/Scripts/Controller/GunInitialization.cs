@@ -6,7 +6,7 @@ namespace Test2DGame
     {
         private readonly Transform _gunTransform;
 
-        public GunInitialization(GunFactory gunFactory)
+        public GunInitialization(IGunFactory gunFactory)
         {
             var gunGo = Object.Instantiate(gunFactory.GetGun());
             _gunTransform = gunGo.gameObject.transform;

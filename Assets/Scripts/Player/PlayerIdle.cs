@@ -5,17 +5,19 @@ namespace Test2DGame
     internal class PlayerIdle : State
     {
         public override void Handle(PlayerState playerState, SpriteAnimator spriteAnimator, SpriteRenderer spriteRenderer, 
-            float valueHorizontal, bool doJump, Transform playerTransform, float playerSpeed, float deltaTime)
+            PlayerContactsController playerContacts, float valueHorizontal, bool doJump, Rigidbody2D playerRb, 
+            IUnit playerData, float fixedDeltaTime)
         {
-            if (valueHorizontal != 0)
+            if (valueHorizontal > 0 && !playerContacts.HasRightContacts || 
+                valueHorizontal < 0 && !playerContacts.HasLeftContacts)
             {
-                if (doJump)
-                {
-                    playerState.State = new PlayerMoveInJump(VerticalVelocity);
-                }
-                else
+                if (!doJump && playerContacts.IsGrounded)
                 {
                     playerState.State = new PlayerMoveHorizontal();
+                }
+                else
+                {                
+                    playerState.State = new PlayerMoveInJump();
                 }
             }
             else if (doJump)
@@ -24,7 +26,7 @@ namespace Test2DGame
             }
             else
             {
-                spriteAnimator.StartAnimation(spriteRenderer, Track.Idle, true, AnimationSpeed/4);
+                spriteAnimator.StartAnimation(spriteRenderer, Track.Idle, true, playerData.AnimationSpeed/4);
             }
         }
     }

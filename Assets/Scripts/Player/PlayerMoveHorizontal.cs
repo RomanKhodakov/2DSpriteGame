@@ -5,9 +5,11 @@ namespace Test2DGame
     internal class PlayerMoveHorizontal : State
     {
         public override void Handle(PlayerState playerState, SpriteAnimator spriteAnimator, SpriteRenderer spriteRenderer, 
-            float valueHorizontal, bool doJump, Transform playerTransform, float playerSpeed, float deltaTime)
+            PlayerContactsController playerContacts, float valueHorizontal, bool doJump, Rigidbody2D playerRb, 
+            IUnit playerData, float fixedDeltaTime)
         {
-            if (valueHorizontal == 0)
+            if (!(valueHorizontal > 0 && !playerContacts.HasRightContacts || 
+                valueHorizontal < 0 && !playerContacts.HasLeftContacts))
             {
                 if (!doJump)
                 {
@@ -20,13 +22,18 @@ namespace Test2DGame
             }
             else if (doJump)
             {
-                playerState.State = new PlayerMoveInJump(VerticalVelocity);
+                playerState.State = new PlayerMoveInJump();
             }
             else
             {
-                spriteAnimator.StartAnimation(spriteRenderer, Track.Walk, true, AnimationSpeed);
-                playerTransform.position += Vector3.right * (deltaTime * playerSpeed * (valueHorizontal < 0 ? -1 : 1));
-                spriteRenderer.flipX = valueHorizontal < 0;
+                spriteAnimator.StartAnimation(spriteRenderer, Track.Walk, true, playerData.AnimationSpeed);
+
+                var isLeftMove = valueHorizontal < 0;
+                spriteRenderer.flipX = isLeftMove;
+                
+                var newVelocity = fixedDeltaTime * playerData.MoveSpeed * (isLeftMove ? -1 : 1);
+                
+                playerRb.velocity = playerRb.velocity.Change(x: newVelocity);
             }
         }
     }
