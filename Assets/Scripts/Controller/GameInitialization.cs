@@ -21,7 +21,7 @@ namespace Test2DGame
             var bulletEmitter = new BulletEmitter(bulletFactory, gunInitialization.GetGunTransform());
 
             var ioFactory = new InteractiveObjectsFactory();
-            var ioinitialization = new InteractiveObjectsInitialization(ioFactory);
+            var ioInitialization = new InteractiveObjectsInitialization(ioFactory);
 
             controllers.Add(playerSpriteAnimator);
             controllers.Add(playerInitialization);
@@ -30,13 +30,15 @@ namespace Test2DGame
 
             controllers.Add(new ParallaxManager(camera.transform, data.Background.transform));
             controllers.Add(new InputController(inputInitialization.GetInput()));
+            controllers.Add(new CameraController(playerInitialization.GetPlayerTransform(), camera.transform));
             controllers.Add(new PlayerMoveController(inputInitialization.GetInput(), playerSpriteAnimator,
                 playerInitialization, playerContactsController, data.PlayerData));
 
             controllers.Add(new CheckPointController(new List<CheckPointView>()
             {
-                ioinitialization.GetCheckPoint()
+                ioInitialization.GetCheckPoint()
             }));
+            controllers.Add(new LiftController());
 
             controllers.Add(new GunRotationController(playerInitialization.GetPlayerTransform(),
                 gunInitialization.GetGunTransform()));

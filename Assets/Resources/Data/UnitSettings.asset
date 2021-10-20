@@ -17,6 +17,6 @@ MonoBehaviour:
   _mass: 10
   _colliderSizeX: 0.24
   _colliderSizeY: 0.45
-  _moveSpeed: 30
+  _moveSpeed: 50
   _animationSpeed: 10
   _jumpStartSpeed: 100
