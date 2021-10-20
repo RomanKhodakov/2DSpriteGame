@@ -4,7 +4,7 @@ namespace Test2DGame
 {
     internal class PlayerContactsController: IFixedExecute
     {
-        private const float CollisionThreshold = 0.3f;
+        private const float CollisionThreshold = 0.7f;
 
         private readonly ContactPoint2D[] _contacts = new ContactPoint2D[4];
         private readonly Collider2D _collider;
