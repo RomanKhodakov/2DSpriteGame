@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DistancePlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4792676264560458497, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -203,6 +207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -264,6 +272,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -393,6 +405,76 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &152277474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152277475}
+  - component: {fileID: 152277476}
+  - component: {fileID: 152277477}
+  m_Layer: 0
+  m_Name: DangerZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &152277475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152277474}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.001, y: 1.57, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1646975915}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &152277476
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152277474}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.29, y: 3.91}
+  m_EdgeRadius: 0
+--- !u!114 &152277477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152277474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59dfc053a2ef5ef41825b9afbbd5a451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &172614394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -407,6 +489,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -469,6 +555,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -563,6 +653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -624,6 +718,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -735,8 +833,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 359563990}
-  m_Layer: 0
-  m_Name: Effector
+  m_Layer: 6
+  m_Name: Effectors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -773,6 +871,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -863,6 +965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpringPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4792676264560458497, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -932,6 +1038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -994,6 +1104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1055,6 +1169,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -1197,7 +1315,7 @@ GameObject:
   - component: {fileID: 533488957}
   - component: {fileID: 533488959}
   - component: {fileID: 533488958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointEffector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1278,6 +1396,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -1403,6 +1525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1464,6 +1590,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -1532,6 +1662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -1589,6 +1723,10 @@ PrefabInstance:
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_Name
       value: DistancePlatform (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_IsActive
@@ -1863,6 +2001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -1956,6 +2098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2018,6 +2164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -2075,6 +2225,10 @@ PrefabInstance:
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_Name
       value: LiftPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4792676264560458497, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_RootOrder
@@ -2233,6 +2387,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -2376,6 +2534,10 @@ PrefabInstance:
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_Name
       value: HingeGears (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4792676264560458497, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_RootOrder
@@ -2562,6 +2724,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -2622,7 +2788,7 @@ GameObject:
   - component: {fileID: 1033685216}
   - component: {fileID: 1033685215}
   - component: {fileID: 1033685218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LiftPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2775,6 +2941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2898,6 +3068,92 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
+--- !u!1 &1139023813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139023815}
+  - component: {fileID: 1139023814}
+  m_Layer: 0
+  m_Name: GridGraph
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1139023814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139023813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAAAYIewHG7xMaQIAABEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMlyozAQ/RWXzmMXOE4wc5shjjOHLBXPVC5cZNQYlYVEaYmXlP99WgIb4nBB9Hvd/XoRn4RL00BhlV5qzp4UA/JzRPyZ/Bj14CPs6UbJFT/CmfPOma08iQbOG7VcoT32bkbVYDUvfsmN8OQIjU7yUul6wTaQKWMNmksqDCCklfXeEk2fI7LH1zj1Lgc8TRN/OuIpjUYnPBYgLeieeibGkyiJ8JmmHb+lO1kIWjfAvPbeK5nM0sC+7dxvJzdpcJBYX8eNMKTPqITgptNH7KEJ9We0MQ6rQwLjFOsNonz5FfBNZb32ofNLWRqwnWBND/dcY9vaqOS3antZU7NtRX5Q4Xyeu1lQ1cZ8+gaP4wCXWtWP57Rx5FPYihfbN3ooqLGDXg/N9191O7mjYkvXAt4rkM9qqZWTDEGrnXd1Bqb3/eelsqyCYtvbW6lXRtd8n9h0cjOfxfO7xTi0+diVcwp92GeC1+swhFlrWAkVOh9WAzSO6Q9qD4tjuqho9YL+GfhLN8MN64AHro1FqCtYeqVr5bSnkkVony/M2UxpCcHc6W9AUmEPrxjGXg/zChukvUIeqL9LXfIOO1+RK5dg7vlRdAW9qt1lbqZSuycw1YuzgkvoRXvgGfuUKSnbXTNfQe+1crqkxcBr4zj7umRkHc1vSrZmt8kdKyljY5ZEcZKU8yiNE1rEKQlbyCWWScVrq7PrDg5N9sElbtz5DzNaatqEtWea7pb8WKuBPi5LtSo0gHxpI5w7ZEBjEryhbME49mcF1nIZxk0+cyJUsQWWXwLlodLF3mqa91Fy0vAPZb0lJ1n4peTkRE7/AVBLAwQUAAAICAAAGCHshVpZbG0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNVRUEovSizIKAaKGII4pZkpIHa0UpKBhXFaSlKKqblZSlpiSopuirmBobl5moWBpaF5YrKhpVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAGCHsBxu8TGkCAAARBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAGCHshVpZbG0AAAB4AAAACQAkAAAAAAAAAAAAAAC2AgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAG4DAAAAAA==
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames: []
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 1
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &1139023815
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139023813}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1176402447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2912,6 +3168,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -3016,6 +3276,10 @@ PrefabInstance:
       value: DistancePlatform (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -3114,6 +3378,10 @@ PrefabInstance:
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_Name
       value: PlatformEffector
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4792676264560458497, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_RootOrder
@@ -3219,6 +3487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -3281,6 +3553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -3342,6 +3618,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -3589,6 +3869,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -3650,6 +3934,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -3713,6 +4001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -3775,6 +4067,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -3832,6 +4128,10 @@ PrefabInstance:
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_Name
       value: TargetPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4792676264560458497, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_RootOrder
@@ -4035,7 +4335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1535448208}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SurfaceEffector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4237,7 +4537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1629114433}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4309,6 +4609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -4365,7 +4669,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1646975915}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameLobbie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4386,6 +4690,7 @@ Transform:
   - {fileID: 1629114433}
   - {fileID: 1942214566}
   - {fileID: 359563990}
+  - {fileID: 152277475}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4434,6 +4739,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -4523,6 +4832,10 @@ PrefabInstance:
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_Name
       value: DistancePlatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4792676264560458497, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_RootOrder
@@ -4787,7 +5100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1784302496}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DistancePlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4823,6 +5136,10 @@ PrefabInstance:
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_Name
       value: HingeGears
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_IsActive
@@ -4896,6 +5213,10 @@ PrefabInstance:
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_Name
       value: HingePlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4792676264560458497, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_RootOrder
@@ -5027,6 +5348,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6 (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
@@ -5234,8 +5559,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1942214566}
-  m_Layer: 0
-  m_Name: Platform
+  m_Layer: 6
+  m_Name: Jonits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5301,6 +5626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -5358,6 +5687,10 @@ PrefabInstance:
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_Name
       value: PlatformEffector (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4792676264560458497, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_RootOrder
@@ -5505,6 +5838,10 @@ PrefabInstance:
       value: DistancePlatform (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030020036928920615, guid: eacf1a204a6d6b84cb024c225b1542b3, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -5608,6 +5945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -5701,6 +6042,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -5763,6 +6108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain (16x16)_6 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -5824,6 +6173,10 @@ PrefabInstance:
     - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_Name
       value: Terrain (16x16)_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985195012413793969, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7409191949369183380, guid: 52100cff0c050f5468fa8bcadb1d33dd, type: 3}
       propertyPath: m_RootOrder
