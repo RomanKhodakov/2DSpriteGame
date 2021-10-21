@@ -13,6 +13,9 @@ namespace Test2DGame
             var playerFactory = new PlayerFactory(data.PlayerData);
             var playerInitialization = new PlayerInitialization(playerFactory);
             var playerContactsController = new PlayerContactsController(playerInitialization.GetPlayerCollider());
+            
+            var enemyFactory = new EnemyFactory();
+            var enemyInitialization = new EnemyInitialization(enemyFactory, playerInitialization.GetPlayerTransform());
 
             var gunFactory = new GunFactory();
             var gunInitialization = new GunInitialization(gunFactory);
@@ -22,11 +25,14 @@ namespace Test2DGame
 
             var ioFactory = new InteractiveObjectsFactory();
             var ioInitialization = new InteractiveObjectsInitialization(ioFactory);
+            var dangerZoneController = new DangerZoneController();
 
             controllers.Add(playerSpriteAnimator);
             controllers.Add(playerInitialization);
             controllers.Add(playerContactsController);
+            controllers.Add(enemyInitialization);
             controllers.Add(gunInitialization);
+            controllers.Add(dangerZoneController);
 
             controllers.Add(new ParallaxManager(camera.transform, data.Background.transform));
             controllers.Add(new InputController(inputInitialization.GetInput()));
@@ -40,9 +46,9 @@ namespace Test2DGame
             }));
             controllers.Add(new LiftController());
 
-            controllers.Add(new GunRotationController(playerInitialization.GetPlayerTransform(),
-                gunInitialization.GetGunTransform()));
-            controllers.Add(new GunShootController(bulletEmitter));
+            controllers.Add(new GunPositionController(playerInitialization.GetPlayerTransform(),
+                gunInitialization, enemyInitialization));
+            controllers.Add(new GunShootProxy(new GunShootController(bulletEmitter), dangerZoneController));
             controllers.Add(new BulletSelfDestructionController(bulletFactory));
         }
     }

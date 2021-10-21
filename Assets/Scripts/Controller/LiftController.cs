@@ -24,9 +24,7 @@ namespace Test2DGame
             sliderJoint.motor = new JointMotor2D() {motorSpeed = -MotorSpeed, maxMotorTorque = MaxMotorTorque};
         }
         private void OnLevelObjectLeave(SliderJoint2D sliderJoint)
-        {
-            
-            Debug.Log(3);
+        {            
             sliderJoint.motor = new JointMotor2D() {motorSpeed = MotorSpeed, maxMotorTorque = MaxMotorTorque};
         }
 

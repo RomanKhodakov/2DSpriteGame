@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Test2DGame
 {
-    internal sealed class GunShootController : IExecute
+    internal sealed class GunShootController
     {
         private const float SpawnTime = 1f;
         private float _currentTime;
