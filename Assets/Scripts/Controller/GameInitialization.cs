@@ -25,7 +25,7 @@ namespace Test2DGame
 
             var ioFactory = new InteractiveObjectsFactory();
             var ioInitialization = new InteractiveObjectsInitialization(ioFactory);
-            var dangerZoneController = new DangerZoneController();
+            var dangerZoneController = new DangerZoneController(enemyInitialization);
 
             controllers.Add(playerSpriteAnimator);
             controllers.Add(playerInitialization);

@@ -6,11 +6,13 @@ namespace Test2DGame
     internal sealed class DangerZoneController : IInitialization, ICleanup
     {
         private readonly DangerZoneView _dangerZoneView;
+        private readonly EnemyInitialization _enemyInitialization;
         private bool _isUnlock = true;
         public bool IsUnlock => _isUnlock;
 
-        public DangerZoneController()
+        public DangerZoneController(EnemyInitialization enemyInitialization)
         {
+            _enemyInitialization = enemyInitialization;
             _dangerZoneView = Object.FindObjectOfType<DangerZoneView>();
         }
 
@@ -19,13 +21,10 @@ namespace Test2DGame
             _dangerZoneView.OnLevelObjectLeave += OnLevelObjectLeave;
         }
 
-        private void OnLevelObjectLeave(List<EnemyView> enemyViews)
+        private void OnLevelObjectLeave()
         {
-            foreach (var enemyView in enemyViews)
-            {
-                _isUnlock = false;
-                // enemyView.DestinationSetter.target = null;
-            }
+            _isUnlock = false;
+            _enemyInitialization.GetEnemyDestinationSetter().target = null;
         }
 
         public void Cleanup()
