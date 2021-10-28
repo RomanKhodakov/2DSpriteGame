@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Test2DGame
 {
-    [CreateAssetMenu(fileName = "SpriteAnimationsConfig", menuName = "Configs/SpriteAnimationsConfig", order = 1)]
+    [CreateAssetMenu(fileName = "SpriteAnimationsConfig", menuName = "AnimationConfigs/SpriteAnimationsConfig", order = 1)]
     internal class SpriteAnimationsConfig : ScriptableObject
     {
         [SerializeField]
