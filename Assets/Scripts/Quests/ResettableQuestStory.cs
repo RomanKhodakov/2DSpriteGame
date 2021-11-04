@@ -9,8 +9,8 @@ namespace Test2DGame
         private readonly List<IQuest> _questsCollection;
         private readonly Text _questHeader;
         private readonly Text _questText;
-        private const string OnCompletedText = "Всё собрано!";
-        private const string OnResetText = "Всё перемешалось. Нужно начать сначала";
+        private const string OnCompletedText = "Completed!";
+        private const string OnResetText = "Everything is messed up. Gotta start over";
         private int _currentIndex;
 
         public bool IsDone => _questsCollection.All(value => value.IsCompleted);
