@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace Test2DGame
 {
     internal sealed class GunShootProxy : IExecute
@@ -15,7 +13,7 @@ namespace Test2DGame
 
         public void Execute(float deltaTime)
         {
-            if (_dangerZoneController.IsUnlock)
+            if (_dangerZoneController.IsUnlockShooting)
             {
                 _gunShootController.Execute(deltaTime);
             }

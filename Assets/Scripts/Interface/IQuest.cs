@@ -7,5 +7,6 @@ namespace Test2DGame
         event Action<IQuest> Completed;
         bool IsCompleted { get; }
         void Reset();
+        public void Dispose();
     }
 }

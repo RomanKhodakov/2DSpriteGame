@@ -8,11 +8,12 @@ namespace Test2DGame
         private SliderJoint2D _sliderJoint;
         private PlayerView _levelObject;
 
-        public SliderJoint2D SliderJoint
+        private SliderJoint2D SliderJoint
         {
             get
             {
-                if (!_sliderJoint) _sliderJoint = gameObject.GetOrAddComponent<SliderJoint2D>();
+                if (!_sliderJoint) 
+                    _sliderJoint = gameObject.GetOrAddComponent<SliderJoint2D>();
                 return _sliderJoint;
             }
         }

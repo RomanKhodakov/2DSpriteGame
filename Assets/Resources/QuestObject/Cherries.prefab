@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3562554427596318270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7683285, y: 0.7621812, z: 0}
+  m_LocalPosition: {x: -4.609, y: 3.243, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2218231053316504406}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spriteRenderer: {fileID: 4969248726335077014}
   _completedColor: {r: 0, g: 0, b: 0, a: 0}
-  _id: 0
+  _id: 3
 --- !u!58 &-699744608273282319
 CircleCollider2D:
   m_ObjectHideFlags: 0

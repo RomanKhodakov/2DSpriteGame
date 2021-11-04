@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17cb50161bfde84a8a2ea5d26bd6b50, type: 3}
+  m_Name: QuestReferences
+  m_EditorClassIdentifier: 
+  _questStoryConfigs:
+  - {fileID: 11400000, guid: 0aeb65c98094e3644871ea9b77c37287, type: 2}
+  _questObjectsViews:
+  - {fileID: 3778604166896297352, guid: 888fcf541bd972b40990b6b19e1d4867, type: 3}
+  - {fileID: 5665209625977811360, guid: 84a6c8964cef6ea468949284aace994f, type: 3}
+  - {fileID: -4308483432384921967, guid: a8826ec04b41cff4787aa1e1d31b9118, type: 3}
+  - {fileID: 6251936576064375392, guid: 7bd9c4f79ae1bd64b8d6c844f5861139, type: 3}
+  _questItemsConfigs:
+  - {fileID: 11400000, guid: 605d1cf4e9c388d4b85f69f6b9f5e43f, type: 2}
+  - {fileID: 11400000, guid: b28256ea787d035468638800e89d8d35, type: 2}
+  - {fileID: 11400000, guid: 9e6ff9db82b2cbe49b53e5449d82a5fb, type: 2}
+  - {fileID: 11400000, guid: c79244c2977e3294b9f334ea1ba94aee, type: 2}

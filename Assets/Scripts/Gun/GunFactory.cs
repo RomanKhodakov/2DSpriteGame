@@ -5,12 +5,6 @@ namespace Test2DGame
 {
     internal sealed class GunFactory : IGunFactory
     {
-
-        public GunFactory()
-        {
-            
-        }
-
         public GameObject GetGun()
         {
             var res = Resources.Load<GameObject>($"Gun/Gun");

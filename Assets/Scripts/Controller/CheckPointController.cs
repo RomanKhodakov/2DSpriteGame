@@ -6,10 +6,12 @@ namespace Test2DGame
     internal class CheckPointController : IInitialization, ICleanup
     {
         private readonly List<CheckPointView> _checkPontViews;
+        private readonly EndGameUIController _endGameUIController;
 
-        public CheckPointController(List<CheckPointView> checkPontViews)
+        public CheckPointController(List<CheckPointView> checkPontViews, EndGameUIController endGameUIController)
         {
             _checkPontViews = checkPontViews;
+            _endGameUIController = endGameUIController;
         }
 
         public void Initialization()
@@ -23,7 +25,7 @@ namespace Test2DGame
             if (_checkPontViews.Contains(checkPointView))
             {
                 Object.Destroy(checkPointView.gameObject);
-                Debug.Log("End Game");
+                _endGameUIController.ShowEndGameUi();
             }
         }
 
@@ -33,5 +35,4 @@ namespace Test2DGame
                 checkPointView.OnLevelObjectContact -= OnLevelObjectContact;
         }
     }
-    
 }

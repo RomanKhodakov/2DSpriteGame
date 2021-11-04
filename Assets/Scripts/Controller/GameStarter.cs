@@ -5,12 +5,13 @@ namespace Test2DGame
     public sealed class GameStarter : MonoBehaviour
     {
         [SerializeField] private Data _data;
+        [SerializeField] private Canvas _canvas;
         private Controllers _controllers;
         
         private void Start()
         {
             _controllers = new Controllers();
-            new GameInitialization(_controllers, _data);
+            new GameInitialization(_controllers, _data, _canvas);
             _controllers.Initialization();
         }
 

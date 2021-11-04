@@ -5,6 +5,7 @@ namespace Test2DGame
     internal sealed class PlayerInitialization : IInitialization
     {
         private const int PlayerSortOrder = 3;
+        private readonly PlayerView _playerView;
         private readonly SpriteRenderer _spriteRenderer;
         private readonly PlayerState _playerState;
         private readonly Rigidbody2D _playerRb;
@@ -13,11 +14,11 @@ namespace Test2DGame
 
         public PlayerInitialization(PlayerFactory playerFactory)
         {
-            var playerView = playerFactory.CreatePlayer();
-            _spriteRenderer = playerView.SpriteRenderer;
-            _playerTransform = playerView.gameObject.transform;
-            _playerRb = playerView.gameObject.GetOrAddComponent<Rigidbody2D>();
-            _playerCollider = playerView.gameObject.GetOrAddComponent<Collider2D>();
+            _playerView = playerFactory.CreatePlayer();
+            _spriteRenderer = _playerView.SpriteRenderer;
+            _playerTransform = _playerView.gameObject.transform;
+            _playerRb = _playerView.gameObject.GetOrAddComponent<Rigidbody2D>();
+            _playerCollider = _playerView.gameObject.GetOrAddComponent<Collider2D>();
             _playerState = new PlayerState(new PlayerIdle(), _playerRb);
         }
         
@@ -27,6 +28,7 @@ namespace Test2DGame
             _playerRb.freezeRotation = true;
         }
 
+        public PlayerView GetPlayerView() => _playerView;
         public SpriteRenderer GetPlayerSpriteRenderer() => _spriteRenderer;
         
         public Transform GetPlayerTransform() => _playerTransform;

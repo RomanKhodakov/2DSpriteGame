@@ -6,7 +6,6 @@ namespace Test2DGame
     {
         private float _horizontal;
         private bool _doJump;
-        private const float PlayerSpeed = 30f;
         private readonly IUserInputProxy<float> _horizontalInputProxy;
         private readonly IUserInputProxy<float> _verticalInputProxy;
         private readonly SpriteAnimator _spriteAnimator;
