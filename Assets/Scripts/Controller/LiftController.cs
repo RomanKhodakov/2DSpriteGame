@@ -1,37 +1,67 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Test2DGame
 {
     internal sealed class LiftController : IInitialization, ICleanup
     {
-        private const float MotorSpeed = 0.7f;
+        private const float MotorSpeed = 1f;
         private const float MaxMotorTorque = 30f;
-        private readonly LiftView _liftView;
+        private readonly LiftView _finalLiftView;
+        private readonly List<LiftView> _commonLiftsViews;
+        private readonly QuestController _questController;
 
-        public LiftController()
+        public LiftController(InteractiveObjectsInitialization ioInitialization, QuestController questController)
         {
-            _liftView = Object.FindObjectOfType<LiftView>();
+            _finalLiftView = ioInitialization.GetFinalLiftView();
+            _commonLiftsViews = ioInitialization.GetCommonLiftsViews();
+            _questController = questController;
         }
 
         public void Initialization()
         {
-            _liftView.OnLevelObjectContact += OnLevelObjectContact;
-            _liftView.OnLevelObjectLeave += OnLevelObjectLeave;
+            foreach (var liftView in _commonLiftsViews)
+            {
+                liftView.OnLevelObjectContact += OnCommonLiftContact;
+                liftView.OnLevelObjectLeave += OnCommonLiftLeave;
+            }
+
+            _finalLiftView.OnLevelObjectContact += OnFinalLiftContact;
+            _finalLiftView.OnLevelObjectLeave += OnFinalLiftLeave;
         }
 
-        private void OnLevelObjectContact(SliderJoint2D sliderJoint)
+        private void OnCommonLiftContact(SliderJoint2D sliderJoint)
         {
             sliderJoint.motor = new JointMotor2D() {motorSpeed = -MotorSpeed, maxMotorTorque = MaxMotorTorque};
         }
-        private void OnLevelObjectLeave(SliderJoint2D sliderJoint)
-        {            
+
+        private void OnCommonLiftLeave(SliderJoint2D sliderJoint)
+        {
             sliderJoint.motor = new JointMotor2D() {motorSpeed = MotorSpeed, maxMotorTorque = MaxMotorTorque};
+        }
+
+        private void OnFinalLiftContact(SliderJoint2D sliderJoint)
+        {
+            if (_questController.IsAllQuestsStoriesDone())
+                sliderJoint.motor = new JointMotor2D() {motorSpeed = -2 * MotorSpeed, maxMotorTorque = MaxMotorTorque};
+        }
+
+        private void OnFinalLiftLeave(SliderJoint2D sliderJoint)
+        {
+            if (_questController.IsAllQuestsStoriesDone())
+                sliderJoint.motor = new JointMotor2D() {motorSpeed = 2 * MotorSpeed, maxMotorTorque = MaxMotorTorque};
         }
 
         public void Cleanup()
         {
-            _liftView.OnLevelObjectContact -= OnLevelObjectContact;
-            _liftView.OnLevelObjectLeave -= OnLevelObjectLeave;
+            foreach (var liftView in _commonLiftsViews)
+            {
+                liftView.OnLevelObjectContact -= OnCommonLiftContact;
+                liftView.OnLevelObjectLeave -= OnCommonLiftLeave;
+            }
+
+            _finalLiftView.OnLevelObjectContact -= OnFinalLiftContact;
+            _finalLiftView.OnLevelObjectLeave -= OnFinalLiftLeave;
         }
     }
 }

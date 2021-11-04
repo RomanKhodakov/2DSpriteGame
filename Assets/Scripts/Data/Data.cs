@@ -8,9 +8,13 @@ namespace Test2DGame
     internal sealed class Data : ScriptableObject
     {
         [SerializeField] private string _playerDataPath;
+        [SerializeField] private string _questReferencesPath;
+        [SerializeField] private string _liftsReferencesPath;
         [SerializeField] private string _spriteAnimationsDataPath;
-        [SerializeField] private string _GunBulletDataPath;
+        [SerializeField] private string _gunBulletDataPath;
         private PlayerData _playerData;
+        private QuestReferences _questReferences;
+        private LiftsReferences _liftsReferences;
         private SpriteAnimationsConfig _playerSpriteAnimations;
         private GunBulletData _gunBulletData;
         private GameObject _background;
@@ -25,6 +29,32 @@ namespace Test2DGame
                 }
 
                 return _playerData;
+            }
+        }
+        
+        public QuestReferences QuestReferences
+        {
+            get
+            {
+                if (_questReferences == null)
+                {
+                    _questReferences = Load<QuestReferences>("Data/" + _questReferencesPath);
+                }
+
+                return _questReferences;
+            }
+        }
+        
+        public LiftsReferences LiftsReferences
+        {
+            get
+            {
+                if (_liftsReferences == null)
+                {
+                    _liftsReferences = Load<LiftsReferences>("Data/" + _liftsReferencesPath);
+                }
+
+                return _liftsReferences;
             }
         }
         
@@ -46,7 +76,7 @@ namespace Test2DGame
             {
                 if (_gunBulletData == null)
                 {
-                    _gunBulletData = Load<GunBulletData>("Data/" + _GunBulletDataPath);
+                    _gunBulletData = Load<GunBulletData>("Data/" + _gunBulletDataPath);
                 }
 
                 return _gunBulletData;

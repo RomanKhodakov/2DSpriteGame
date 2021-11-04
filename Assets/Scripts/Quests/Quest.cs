@@ -1,5 +1,5 @@
 using System;
-using UnityEngine;
+using UnityEngine.UI;
 
 namespace Test2DGame
 {
@@ -8,6 +8,7 @@ namespace Test2DGame
         private readonly QuestObjectView _questView;
         private readonly IQuestModel _questModel;
         private readonly QuestItemsConfig _questItemsConfig;
+        private readonly Text _questText;
         private bool _isActive;
 
         public bool IsCompleted { get; private set; }
@@ -15,11 +16,13 @@ namespace Test2DGame
         public event Action<IQuest> Completed;
 
 
-        public Quest(QuestObjectView questObjectView, IQuestModel questModel, QuestItemsConfig questItemsConfig)
+        public Quest(QuestObjectView questObjectView, IQuestModel questModel, QuestItemsConfig questItemsConfig,
+            Text questText)
         {
             _questView = questObjectView;
             _questModel = questModel;
             _questItemsConfig = questItemsConfig;
+            _questText = questText;
         }
 
         public void Reset()
@@ -52,7 +55,7 @@ namespace Test2DGame
             IsCompleted = true;
             _questView.OnLevelObjectEnter -= OnContact;
             _questView.AfterQuestCompleted();
-            Debug.Log(_questItemsConfig.AfterEnterText);
+            _questText.text = _questItemsConfig.AfterEnterText;
             OnCompleted();
         }
 

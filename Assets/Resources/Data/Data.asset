@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Data
   m_EditorClassIdentifier: 
   _playerDataPath: UnitSettings
+  _questReferencesPath: QuestReferences
+  _liftsReferencesPath: LiftsReferences
   _spriteAnimationsDataPath: SpriteAnimationsConfig
-  _GunBulletDataPath: BulletSettings
+  _gunBulletDataPath: BulletSettings

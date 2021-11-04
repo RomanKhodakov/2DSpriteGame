@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Test2DGame
 {
-    internal sealed class BulletEmitter
+    internal sealed class BulletEmitter : IBulletEmitter
     {
         private readonly IBulletData _bulletData;
         private readonly IBulletFactory _bulletFactory;

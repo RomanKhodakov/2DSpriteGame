@@ -1,18 +1,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Test2DGame
 {
     internal sealed class QuestStory : IQuestStory
     {
         private readonly List<IQuest> _questsCollection;
+        private readonly Text _questHeader;
+        private const string OnCompletedText = "Всё собрано!";
 
         public bool IsDone => _questsCollection.All(value => value.IsCompleted);
 
-        public QuestStory(List<IQuest> questsCollection)
+        public QuestStory(List<IQuest> questsCollection, Text questHeader)
         {
             _questsCollection = questsCollection;
+            _questHeader = questHeader;
             Subscribe();
             ResetQuest(0);
         }
@@ -41,7 +45,7 @@ namespace Test2DGame
             var completedQuestIndex = _questsCollection.IndexOf(completedQuest);
 
             if (IsDone)
-                Debug.Log("Story done!");
+                _questHeader.text = OnCompletedText;
             else
                 ResetQuest(++completedQuestIndex);
         }

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Test2DGame
 {
@@ -7,13 +8,18 @@ namespace Test2DGame
     {
         private readonly DangerZoneView _dangerZoneView;
         private readonly EnemyInitialization _enemyInitialization;
-        private bool _isUnlock = true;
-        public bool IsUnlock => _isUnlock;
+        private readonly Transform _newTargetTransform;
+        private readonly Text _questText;
+        private const string OnExitText = "Теперь можно спокойно искать компоненты. Начинай с клубники.";
+        public bool IsUnlockShooting { get; private set; } = true;
 
-        public DangerZoneController(EnemyInitialization enemyInitialization)
+        public DangerZoneController(EnemyInitialization enemyInitialization, 
+            InteractiveObjectsInitialization interactiveObjectsInitialization, GameObject questText)
         {
             _enemyInitialization = enemyInitialization;
-            _dangerZoneView = Object.FindObjectOfType<DangerZoneView>();
+            _newTargetTransform = interactiveObjectsInitialization.GetCheckPointTransform();
+            _dangerZoneView = interactiveObjectsInitialization.GetDangerZone();
+            _questText = questText.GetComponentInChildren<Text>();
         }
 
         public void Initialization()
@@ -23,8 +29,10 @@ namespace Test2DGame
 
         private void OnLevelObjectLeave()
         {
-            _isUnlock = false;
-            _enemyInitialization.GetEnemyDestinationSetter().target = null;
+            if (!IsUnlockShooting) return;
+            IsUnlockShooting = false;
+            _questText.text = OnExitText;
+            _enemyInitialization.GetEnemyDestinationSetter().target = _newTargetTransform;
         }
 
         public void Cleanup()
