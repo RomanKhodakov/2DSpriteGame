@@ -10,7 +10,7 @@ namespace Test2DGame
         private readonly EnemyInitialization _enemyInitialization;
         private readonly Transform _newTargetTransform;
         private readonly Text _questText;
-        private const string OnExitText = "Теперь можно спокойно искать компоненты. Начинай с клубники.";
+        private const string OnExitText = "Now you can safely search for components. Start with strawberry";
         public bool IsUnlockShooting { get; private set; } = true;
 
         public DangerZoneController(EnemyInitialization enemyInitialization, 

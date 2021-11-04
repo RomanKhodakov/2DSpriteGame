@@ -6,7 +6,7 @@ namespace Test2DGame
 {
     internal class EndGameUIController : IInitialization
     {
-        private const string VictoryEndGameText = "Успех!";
+        private const string VictoryEndGameText = "Success!";
         private readonly Text _endGameText;
         private readonly Button _menuButton;
         private readonly Button _continueButton;
